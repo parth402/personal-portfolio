@@ -43,13 +43,16 @@
 
     <div class="hero-card">
       <img src="images/hero-card.png" alt="Laptop and coding setup" class="hero-card-img" width="280" height="180">
-      <h2 class="card-title">What I do</h2>
+      <p class="card-label">What I do</p>
+      <h2 class="card-title">Software Engineering & Development</h2>
       <p class="card-description">
-        I'm an aspiring software engineer learning and building projects to improve my skills.
+        I build and learn through projects - web apps, APIs, and more.
       </p>
+      <p class="card-tags">Web Development · Software Engineering · Machine Learning</p>
       <p class="card-text-subtle">
         Currently open to internships and opportunities in software engineering.
       </p>
+      <a href="#projects" class="card-cta">See my projects</a>
     </div>
   </section>
   
@@ -123,8 +126,8 @@
         </article>
 
         <article class="project-card">
-          <h3> Project 2</h3>
-          <p> Description of Project 2</p>
+          <h3> Wordle Clone</h3>
+          <p> Recreates the popular word game Wordle using Python. Browser game with responsive UI, keyboard input, guess validation, animated feedback, and shareable results.</p>
           <div class="project-tags">
             <a href="https://github.com/parth-2004/project-2" target="_blank">GitHub</a>
             <a href="https://parth-2004.github.io/project-2/" target="_blank">Live Demo</a>
@@ -132,8 +135,8 @@
         </article>
 
         <article class="project-card">
-          <h3> Project 3</h3>
-          <p> Description of Project 3</p>
+          <h3> Spotify listening analysis </h3>
+          <p> Built a Spotify listening analytics pipeline that transforms personal streaming history into insights on top artists, tracks, genres, and listening patterns over time, with interactive charts and recommendations.</p>
           <div class="project-tags">
             <a href="https://github.com/parth-2004/project-3" target="_blank">GitHub</a>
             <a href="https://parth-2004.github.io/project-3/" target="_blank">Live Demo</a>
@@ -168,23 +171,27 @@
           </a>
         </div>
 
-        <form class="contact-form">
+        <form class="contact-form" action="https://formsubmit.co/parthppatel17@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New message from your portfolio">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+
           <label>
             Name
-            <input type="text" name="name" placeholder="Your name" />
+            <input type="text" name="name" placeholder="Your name" required />
           </label>
 
           <label>
             Email
-            <input type="email" name="email" placeholder="you@example.com" />
+            <input type="email" name="email" placeholder="you@example.com" required />
           </label>
 
           <label>
             Message
-            <textarea name="message" rows="5" placeholder="What would you like to build?"></textarea>
+            <textarea name="message" rows="5" placeholder="What would you like to build?" required></textarea>
           </label>
 
-          <button class="button primary" type="button">Send</button>
+          <button class="button primary" type="submit">Send</button>
         </form>
       </div>
     </section>
