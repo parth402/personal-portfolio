@@ -14,9 +14,9 @@
       <a class="logo" href="#top">Parth</a>
 
       <ul class = "nav-list">
-        <li><a href="projects">Projects</a></li>
-        <li><a href="about">About</a></li>
-        <li><a href="contact">Contact</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -25,12 +25,49 @@
   <section class = "hero">
     <div class = "container">
       <p class="hero-greeting">Hello, I'm</p>
-      <h1 class="hero-title">Parth</h1>
+      <h1 class="hero-title"><span class="hero-title-rotating" aria-live="polite">Parth</span></h1>
       <p class="hero-subtitle">
         I'm a computer science and engineering student at the Ohio State University
       </p>
+      <div class="hero-buttons"> 
+        <a class="primary-button" href="#projects">View Projects</a>
+        <a class="secondary-button" href="#contact">Contact Me</a>
+      </div>
+
+      <ul class="quick-facts">
+        <li> Ohio State University</li>
+        <li> Computer Science and Engineering</li>
+      </ul>
+    </div>
+
+    <div class="hero-card">
+      <div class="avatar" aria-hidden="true"></div>
+      <h2 class="card-title">What I do</h2>
+      <p class="card-description">
+        I'm a aspiring software engineer who is currently learning and building projects to improve my skills.
+      </p>
+      <p class="card-text-subtle">
+        Currently open to internships and opportunities in the field of software engineering.
+      </p>
     </div>
   </section>
+  
 </main>
+  <script>
+    (function () {
+      var titles = ['Parth', 'An Engineer', 'A Software Developer', 'A CS Student'];
+      var el = document.querySelector('.hero-title-rotating');
+      var i = 0;
+      if (!el) return;
+      setInterval(function () {
+        i = (i + 1) % titles.length;
+        el.style.opacity = '0';
+        setTimeout(function () {
+          el.textContent = titles[i];
+          el.style.opacity = '1';
+        }, 250);
+      }, 2800);
+    })();
+  </script>
 </body>
 </html>
